@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800&display=swap');
+@font-face {
+    font-family: 'Righteous';
+    src: url('/assets/font/Righteous.ttf');
+}
+
+body,
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Style the navigation bar links */
+.navbar .navigation {
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+.navbar .hotline-button {
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbar .hotline-button:hover {
+    background-color: red;
+    color: white;
+    border-color: red;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    color: #d72c2c; /* Text color on hover */
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Tệp CSS của bạn */
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ trong suốt */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.img-container:hover img {
+    transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+    transition: transform 0.3s;
+}
+
+/* Define styles for product items */
+.product-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    transition: background-color 0.3s, transform 0.3s;
+    transform-origin: center;
+}
+
+/* Apply hover effect when hovering over product items */
+.product-item:hover {
+    background-color: gray;
+    transform: scale(1.05);
+}
+
+body {
+    background: #dddddd;
+    box-sizing: border-box;
+}
+.swiper-pagination-bullet {
+    width: 15px !important;
+    height: 4px !important;
+    border-radius: 4px !important;
+    background-color: #000000 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #ff3939 !important;
+}
+
+.bi.bi-gift-fill:hover + .gift-display,
+.gift-display:hover {
+    display: block;
+}
+
+.ddmenu__title,
+.ddmenu__titleContainer__right-caret {
+    color: #444;
+}
+.ddmenu__container.ddmenu--open > .ddmenu__titleContainer .ddmenu__titleContainer__right-caret {
+    transform: rotate(90deg);
+}
+.ddmenu__container.ddmenu--card-menu.ddmenu--open .ddmenu__drop-menu .ddmenu__title,
+.ddmenu__title:hover,
+.ddmenu__item:hover {
+    color: #ef4444;
+}
+.ddmenu__container:not(.ddmenu--card-menu).ddmenu--open > .ddmenu__drop-menu {
+    display: flex;
+}
+.ddmenu__drop-menu .ddmenu__container {
+    margin-bottom: 0.5rem;
+}
+.ddmenu__drop-menu .ddmenu__container:last-of-type {
+    margin-bottom: 0;
+}
+
+.top-menu__container.top-menu--open {
+    visibility: visible;
+    opacity: 100;
+}
+.top-menu__container.top-menu--open > div {
+    transform: translateX(0);
+}
+
+.ddmenu__container.ddmenu--card-menu:hover > .ddmenu__drop-menu {
+    display: block;
+}
+
+.ddmenu__container.ddmenu--card-menu .ddmenu__menu-content .ddmenu__title__text {
+    line-height: 1.25;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.ddmenu__container.ddmenu--card-menu .ddmenu__menu-content .ddmenu__drop-menu,
+.ddmenu__container.ddmenu--card-menu .ddmenu__menu-content .ddmenu__item {
+    margin: 0;
+}
+.ddmenu__container.ddmenu--card-menu:hover > .ddmenu__titleContainer .ddmenu__title,
+.ddmenu__container.ddmenu--card-menu:hover > .ddmenu__titleContainer .ddmenu__item.bi.bi-gift-fill:hover,
+.ddmenu__container.ddmenu--card-menu:hover > .ddmenu__titleContainer .ddmenu__titleContainer__right-caret {
+    color: #fff;
+}
+#sidebar-container.sidebar--open {
+    display: block;
+}
+@media (max-width: 1024px) {
+    .admin-sidebar > .ddmenu__container > .ddmenu__titleContainer .ddmenu__title .ddmenu__title__text {
+        display: none;
+    }
+}

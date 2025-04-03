@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/assets/img/pc-logo-white.svg" />
+        <link rel="stylesheet" href="assets/css/cart.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <title>NewComputerStore.VN</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="bg-white">
+        <header id="header" class="w-full bg-[#d72c2c]">
+            <div
+                class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
+            >
+                <!-- logo & menu -->
+                <div class="flex items-center gap-2 sm:flex-row-reverse">
+                    <!-- main menu btn -->
+                    <button
+                        title="Menu"
+                        onclick="handleOpenMainMenu()"
+                        class="inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-list text-white text-xl"></i>
+                    </button>
+                    <div
+                        class="top-menu__container invisible opacity-0 transition-all duration-300 overflow-x-hidden absolute top-0 left-0 w-full h-screen overflow-auto bg-[#00000049] z-50"
+                    >
+                        <div
+                            class="max-[480px]:w-full w-[320px] min-h-full bg-white float-right translate-x-full transition-transform duration-300"
+                        >
+                            <div class="">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase font-medium">Danh mục sản phẩm</h1>
+                                    <button
+                                        onclick="handleOpenMainMenu()"
+                                        class="inline-flex items-center justify-center px-2 py-1"
+                                    >
+                                        <span class="font-black leading-none">&#x2715;</span>
+                                    </button>
+                                </div>
+                                <div class="category-container flex flex-col"></div>
+                            </div>
+                            <div class="text-[#444] font-medium">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase">Thông tin</h1>
+                                </div>
+                                <div class="px-5 flex flex-col">
+                                    <a
+                                        title="Hotline"
+                                        href="tel:+84000000000"
+                                        class="flex items-center gap-4 py-3 rounded text-red-500"
+                                    >
+                                        <i class="leading-none bi bi-headset text-2xl"></i>
+                                        <p class="font-WorkSans break-words leading-none text-sm">Hotline 1800.xxxx</p>
+                                    </a>
+                                    <a
+                                        title="Chương trình khuyến mãi"
+                                        href="/sales.html"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-tags text-xl"></i>
+                                        <p
+                                            class="font-WorkSans font-bold leading-none text-sm block text-red-500 uppercase"
+                                        >
+                                            Khuyến mãi
+                                        </p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn trả góp"
+                                        href="#help/installment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn trả góp</p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn thanh toán"
+                                        href="#help/payment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn thanh toán</p>
+                                    </a>
+
+                                    <a
+                                        title="Chính sách bảo hành"
+                                        href="#policy/warranty"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Chính sách bảo hành</p>
+                                    </a>
+
+                                    <a
+                                        title="Thông tin liên lạc"
+                                        href="#help/contact"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-telephone text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Thông tin liên lạc</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- logo icon -->
+                    <a href="/" class="min-[400px]:inline-flex hidden px-2 items-center gap-1">
+                        <!-- logo -->
+                        <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e6e6e6;
+                                    }
+                                    .cls-2 {
+                                        fill: #ccc;
+                                    }
+                                    .cls-3 {
+                                        fill: #3f464d;
+                                    }
+                                    .cls-4 {
+                                        fill: #363f47;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="_01" data-name="01">
+                                <polygon
+                                    class="cls-1"
+                                    points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
+                                    id="id_101"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <polygon
+                                    class="cls-2"
+                                    points="19.67 25 12.33 25 13 23 19 23 19.67 25"
+                                    id="id_102"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <path
+                                    class="cls-1"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
+                                    id="id_103"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></path>
+                                <path
+                                    class="cls-3"
+                                    d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
+                                    id="id_104"
+                                ></path>
+                                <rect
+                                    class="cls-2"
+                                    x="16"
+                                    y="4"
+                                    width="13"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_105"
+                                ></rect>
+                                <path
+                                    class="cls-2"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
+                                    id="id_106"
+                                ></path>
+                                <rect
+                                    class="cls-1"
+                                    x="15"
+                                    y="4"
+                                    width="14"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_107"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></rect>
+                                <rect class="cls-3" x="18" y="9" width="9" height="1" id="id_108"></rect>
+                                <rect class="cls-3" x="18" y="12" width="9" height="1" id="id_109"></rect>
+                                <circle class="cls-3" cx="19" cy="25" r="1" id="id_110"></circle>
+                                <rect class="cls-4" x="14" y="20" width="1" height="4" id="id_111"></rect>
+                            </g>
+                        </svg>
+                        <h1 class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase">
+                            NewComputerStore.vn
+                        </h1>
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="flex bg-white rounded-2xl px-2 items-center w-full">
+                    <input
+                        class="w-full bg-transparent text-[#444] outline-none py-2 px-3 font-WorkSans leading-none text-sm placeholder:text-sm"
+                        placeholder="Bạn cần tìm gì?"
+                        id="search-input"
+                        name="searchValue"
+                        type="text"
+                    />
+                    <span class="px-2 cursor-pointer">
+                        <i class="leading-none bi bi-search"></i>
+                    </span>
+                </div>
+                <!-- nav -->
+                <div class="flex gap-2 items-center justify-center">
+                    <!-- hotline btn -->
+                    <a
+                        title="Hotline"
+                        href="tel:+84000000000"
+                        class="sm:inline-flex hidden items-center gap-2 w-min py-1 px-2 rounded"
+                    >
+                        <i class="leading-none bi bi-headset text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Hotline 1800.xxxx
+                        </p>
+                    </a>
+                    <!-- showroom btn -->
+                    <a
+                        title="Cửa hàng"
+                        href="#showrooms"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-pin-map text-white text-xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Cửa hàng
+                        </p>
+                    </a>
+                    <!-- lookup order btn -->
+                    <a
+                        title="Tra cứu đơn hàng"
+                        href="#lookup-orders"
+                        class="relative sm:inline-flex hidden items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-truck text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- cart btn -->
+                    <a
+                        title="Giỏ hàng"
+                        href="/cart.html"
+                        class="relative inline-flex items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-cart text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- login btn -->
+                    <a
+                        title="Đăng nhập"
+                        href="/loginForm.html"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-person-fill text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Đăng nhập
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-white shadow-md mx-auto flex flex-col justify-between items-center">
+                <!-- Top Products Nav -->
+                <div
+                    class="bg-[#D72C2C] max-[425px]:hidden flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
+                >
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Macbook</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop Gaming</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop văn phòng</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Linh kiện PC</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Card đồ họa</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Màn hình LED</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Bàn phìm</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Chuột</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Tai nghe</a>
+                </div>
+                <!-- Help & Policy nav -->
+                <div class="lg:flex hidden justify-center mx-auto gap-4">
+                    <a
+                        title="Chương trình khuyến mãi"
+                        href="/sales.html"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-tags text-xl"></i>
+                        <p class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase">
+                            Khuyến mãi
+                        </p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn trả góp"
+                        href="#help/installment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn trả góp</p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn thanh toán"
+                        href="#help/payment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn thanh toán</p>
+                    </a>
+
+                    <a
+                        title="Chính sách bảo hành"
+                        href="#policy/warranty"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Chính sách bảo hành</p>
+                    </a>
+
+                    <a
+                        title="Thông tin liên lạc"
+                        href="#help/contact"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-telephone text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Thông tin liên lạc</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="insMain mb-10 h-auto mx-auto max-w-[1200px] px-5 py-2 font-WorkSans">
+            <section id="insCartPage" class="bg_w ajax-cart-popup">
+                <div class="content">
+                    <div id="AjaxifyCart" class="ajaxcart">
+                        <div class="page-header mt-4 ml-4 font-semibold text-4xl">
+                            <h1 class="page-header">GIỎ HÀNG</h1>
+                        </div>
+                        <div class="page-content flex flex-col gap-4 items-start xl:flex-row">
+                            <div class="boxCart leftCart flex flex-col w-full">
+                                <div
+                                    class="cart_header_labels hidden-xs clearfix my-3 mb-15 text-center border-b border-t border-e5e5e5 py-3 flex flex-row"
+                                >
+                                    <div class="label_item whitespace-no-wrap text-center basis-[47%]">
+                                        <div class="cart_product">Sản phẩm</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[30%]">
+                                        <div class="cart_price">Giá</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[9%]">
+                                        <div class="cart_quantity">SL</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[14%]">
+                                        <div class="cart_delete">Xóa</div>
+                                    </div>
+                                </div>
+
+                                <div class="ajax_content_cart">
+                                    <div
+                                        class="line-item list_product_cart clearfix flex flex-row"
+                                        data-handle="man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                        data-id="1110996207"
+                                    >
+                                        <div class="cpro_item image basis-[47%] px-2">
+                                            <div class="cpro_item_inner">
+                                                <a
+                                                    href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                                    class="cart__image"
+                                                >
+                                                    <img
+                                                        class="img-responsive w-full max-h-[150px] object-contain"
+                                                        src="/assets/img/img_manhinh_banchay/man_1.webp"
+                                                        alt="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
+                                                    />
+                                                </a>
+                                                <a
+                                                    href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                                    class="product_name line-clamp-3 text-sm mt-2 sm:w-[70%] w-full sm:mx-auto"
+                                                >
+                                                    Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA,
+                                                    144Hz, 1ms, cong 1000R
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cpro_item price basis-[30%] text-center px-2">
+                                            <div class="cpro_item_inner">
+                                                <span class="price product-price"
+                                                    ><span class="money">5,070,000₫</span></span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="cpro_item qty text-center basis-[9%] px-2">
+                                            <div class="cpro_item_inner">
+                                                <div class="ajaxcart__qty quantity-partent">
+                                                    <input
+                                                        type="number"
+                                                        class="ajaxcart__qty-num line-item-qty w-6"
+                                                        data-title="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
+                                                        min="1"
+                                                        value="1"
+                                                        data-id="1110996207"
+                                                        aria-label="quantity"
+                                                        pattern="[0-9]*"
+                                                        data-buyone="True"
+                                                        data-max="6"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cpro_item remove basis-[14%] text-center px-2">
+                                            <div class="cpro_item_inner">
+                                                <a
+                                                    href="/cart/change?line=1&amp;quantity=0"
+                                                    class="cart__remove ajaxcart__remove"
+                                                    data-id="1110996207"
+                                                >
+                                                    <i class="bi bi-trash hover:text-red-500" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxCart-rightCart xl:w-1/3 w-full">
+                                <div class="list_button_cart clearfix">
+                                    <div class="actionCart clearfix text-right">
+                                        <div class="mb-6">
+                                            <p>
+                                                <span class="cart__subtotal-title text-left">Tổng:</span>
+                                                <span class="h3 cart__subtotal"
+                                                    ><span class="money float-right">5,070,000₫</span></span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="btn-checkout-continute-shopping flex flex-row gap-x-6 gap-y-2 justify-end flex-wrap xl:flex-nowrap"
+                                        >
+                                            <a
+                                                class="btn con-ajax-cart btn-outline align-middle py-2.5 font-medium checkout inline-block px-5"
+                                                href="/"
+                                                title="Tiếp Tục Mua Sắm"
+                                                >Tiếp Tục Mua Sắm</a
+                                            >
+                                            <button
+                                                id="checkout-cart"
+                                                name="checkout"
+                                                class="btn btn-outline checkout btn-style-2 font-medium checkout py-2.5 px-10"
+                                            >
+                                                Thanh Toán
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="note_cart mt-3 flex w-full flex-col xl:items-start items-end">
+                                        <label class="control-label block" for="CartSpecialInstructions"
+                                            >*Ghi chú:
+                                        </label>
+                                        <textarea
+                                            name="note"
+                                            class="form-control max-w-lg w-full"
+                                            placeholder="Ghi chú cho đơn hàng của bạn..."
+                                            id="CartSpecialInstructions"
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="pd_saler">
+                                        <h3 class="text-base text-gray-500 pb-5 border-b border-gray-300 my-4">
+                                            MUA TRẢ GÓP QUA THẺ TÍN DỤNG
+                                        </h3>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Ấn Thanh Toán, nhập thông tin
+                                        </p>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Chọn hình thức: Thanh toán thẻ - Trả góp. Lưu ý: LH nhân viên để kiểm tra
+                                            tồn kho sản phẩm trước khi thanh toán
+                                        </p>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Chọn loại thẻ phù hợp với nhu cầu, nhập thông tin, sau đó tiến hành thanh
+                                            toán
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer id="footer" class="w-full min-h-[500px] bg-white text-[#444] border-t">
+            <div class="h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2">
+                <!-- Member Container -->
+                <div
+                    class="w-full py-4 grid xl:grid-flow-col lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-4"
+                >
+                    <!-- About us -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Về NewComputerStore.VN</li>
+                        <li class="hover:underline"><a href="#about">Giới thiệu</a></li>
+                        <li class="hover:underline"><a href="#work">Tuyển dụng</a></li>
+                    </ul>
+
+                    <!-- Privacy & Policy -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Các chính sách</li>
+                        <li class="hover:underline">
+                            <a href="#WarrantyPolicy">Chính sách bảo hành</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#PaymentPolicy">Chính sách thanh toán</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#DeliveryPolicy">Chính sách giao hàng</a>
+                        </li>
+                        <li class="hover:underline"><a href="#PrivacyPolicy">Chính sách bảo mật</a></li>
+                    </ul>
+
+                    <!-- Info -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Thông tin</li>
+                        <li class="hover:underline">
+                            <a href="#WarrantyPolicy">Hệ thống cửa hàng</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#Service Center">Trung tâm bảo hành</a>
+                        </li>
+                    </ul>
+
+                    <!-- Support info -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Tổng đài hỗ trợ</li>
+                        <li class="flex gap-3">
+                            Gọi mua:
+                            <a href="tel:+1800.xxxx" class="text-blue-600 hover:underline text-base font-medium"
+                                >1800.xxxx</a
+                            >
+                            (8:00 - 21:00)
+                        </li>
+                        <li class="flex gap-3">
+                            CSKH:
+                            <a href="tel:+1800.xxxx" class="text-blue-600 hover:underline text-base font-medium"
+                                >1800.xxxx</a
+                            >
+                            (8:00 - 21:00)
+                        </li>
+                        <li class="flex gap-3">
+                            Email:
+                            <a href="mailto:cskh@NewComputerStore.vn" class="text-blue-600 hover:underline text-base font-medium"
+                                >cskh@NewComputerStore.vn</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- Payment Info & Delivery Info -->
+                    <div class="">
+                        <!-- Delivery Info -->
+                        <ul class="text-sm mb-4">
+                            <li class="font-medium text-base uppercase text-black">Đơn vị vận chuyển</li>
+                            <ul class="flex gap-2">
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_1.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_2.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_3.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_4.webp" alt="Ship info" />
+                                </li>
+                            </ul>
+                        </ul>
+                        <!-- Payment Info -->
+                        <ul class="text-sm">
+                            <li class="font-medium text-base uppercase text-black">Phương thức thanh toán</li>
+                            <ul class="flex gap-2 flex-wrap mb-2">
+                                <li>
+                                    <img
+                                        class="h-10"
+                                        src="/assets/img/theme-icon/online-bank.jpg"
+                                        alt="Online Banking"
+                                    />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/jcb.svg" alt="Pay with JCB" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/visa.png" alt="Pay with visa" />
+                                </li>
+                                <li>
+                                    <img
+                                        class="h-10"
+                                        src="/assets/img/theme-icon/mastercard.png"
+                                        alt="Pay with Mastercard"
+                                    />
+                                </li>
+                            </ul>
+                            <ul class="flex gap-2 flex-wrap">
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/cash-only.png" alt="Cash only" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/tra-gop-0.png" alt="Trả góp 0%" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/momo.svg" alt="Pay with Momo" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/zalopay.png" alt="pay with ZaloPay" />
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom Footer Container -->
+                <div class="w-full border-t py-4 flex justify-between items-center md:flex-row flex-col">
+                    <!-- Contact Container -->
+                    <div class="">
+                        <h1 class="uppercase font-medium text-center">Kết nối với NewComputerStore.VN</h1>
+                        <!-- Social -->
+                        <div class="flex gap-2">
+                            <a href="#fb" class="p-1">
+                                <img
+                                    class="w-9 h-9 p-1"
+                                    src="/assets/img/theme-icon/facebook.png"
+                                    alt="NewComputerStore.VN Facebook"
+                                />
+                            </a>
+                            <a href="#gmail" class="p-1">
+                                <img class="w-9 h-9" src="/assets/img/theme-icon/gmail.svg" alt="NewComputerStore.VN Gmail" />
+                            </a>
+                            <a href="#messenger" class="p-1">
+                                <img
+                                    class="w-9 h-9"
+                                    src="/assets/img/theme-icon/messenger.svg"
+                                    alt="NewComputerStore.VN Youtube"
+                                />
+                            </a>
+                            <a href="#youtube" class="p-1">
+                                <img class="w-9 h-9" src="/assets/img/theme-icon/youtube.svg" alt="NewComputerStore.VN Youtube" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Certification Container -->
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#BoCongThuong">
+                            <img
+                                class="h-16"
+                                src="/assets/img/theme-icon/logo-bct.webp"
+                                alt="NewComputerStore.VN Bộ Công Thương"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <!-- Credit -->
+                <div class="w-full">
+                    <h1 class="text-[#444] font-medium text-sm text-center leading-none">
+                        2023 &copy; Bản quyền thuộc về NewComputerStore.VN
+                    </h1>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/slider.js"></script>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/assets/img/pc-logo-white.svg" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <title>NewComputerStore.VN</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="bg-white">
+        <!-- close btn -->
+        <a href="/" id="closeButton" tabindex="1" class="w-1/2 sm:w-full">
+            <i class="bi bi-x-lg text-4xl fixed top-16 left-10 ml-2 transition-transform hover:scale-110"></i>
+        </a>
+
+        <!-- top btn -->
+        <button
+            id="registerButton"
+            class="fixed top-10 right-10 bg-white text-blue-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 flex items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
+        >
+            Đăng ký
+        </button>
+
+        <!-- top btn -->
+        <button
+            id="loginButton"
+            class="hidden fixed top-10 right-10 bg-white text-red-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
+        >
+            Đăng nhập
+        </button>
+        <!-- container form sign in -->
+        <div id="loginContainer" class="flex justify-center items-center min-h-screen font-WorkSans">
+            <div class="bg-white p-8 rounded w-96 lg:w-1/3 xl:w-1/3">
+                <h1 class="text-5xl font-semibold text-center mb-4 text-red-600">Đăng nhập</h1>
+                <!-- login form -->
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label for="email" class="block text-xl font-medium text-gray-600">Email</label>
+                        <input
+                            autocomplete="email"
+                            type="text"
+                            id="login-email"
+                            placeholder="email@example.com"
+                            name="email"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-xl font-medium text-gray-600">Mật khẩu</label>
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="***"
+                            name="password"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <button
+                            id="login-submit"
+                            class="w-full bg-red-600 text-white text-lg font-semibold py-2 rounded focus:outline-none transition duration-300 hover:bg-red-700 hover:shadow-md"
+                        >
+                            Đăng nhập
+                        </button>
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <!-- Đường kẻ trái, chiếm hết không gian còn lại -->
+                        <span class="flex-grow border-t border-gray-400"></span>
+                      
+                        <!-- Dòng chữ, không co giãn -->
+                        <p class="mx-2">Hoặc đăng ký bằng</p>
+                      
+                        <!-- Đường kẻ phải, chiếm hết không gian còn lại -->
+                        <span class="flex-grow border-t border-gray-400"></span>
+                      </div>
+                      
+                    <div class="flex justify-between gap-2">
+                        <a
+                            href="#"
+                            class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4 flex items-center"
+                        >
+                            <img src="/assets/img/theme-icon/facebook.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
+                            Facebook
+                        </a>
+
+                        <a
+                            href="#"
+                            class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none flex items-center justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4"
+                        >
+                            <img src="/assets/img/theme-icon/google.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
+                            Google
+                        </a>
+                    </div>
+                </form>
+                <div class="text-center text-base text-gray-600">
+                    <p>
+                        Chưa có tài khoản?
+                        <a href="#" class="text-indigo-500 hover:underline">Đăng ký ngay</a>
+                    </p>
+                    <p>
+                        Quên mật khẩu?
+                        <a href="#" class="text-indigo-500 hover:underline">Khôi phục mật khẩu</a>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Register Container -->
+        <div id="registerContainer" class="justify-center items-center min-h-screen font-WorkSans hidden">
+            <div class="bg-white p-8 rounded w-96 lg:w-1/3 xl:w-1/3">
+                <h1 class="text-5xl font-semibold text-center mb-4 text-blue-500">Đăng ký</h1>
+                <!-- registerForm -->
+                <form id="registerForm">
+                    <div class="mb-4">
+                        <label for="full-name" class="block text-xl font-medium text-gray-600">Số điện thoại</label>
+                        <input
+                            autocomplete="cc-family-name"
+                            type="text"
+                            id="full-name"
+                            placeholder="0795174080"
+                            name="full-name"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="full-name" class="block text-xl font-medium text-gray-600">Địa chỉ</label>
+                        <input
+                            autocomplete="cc-family-name"
+                            type="text"
+                            id="full-name"
+                            placeholder="123/Phan Văn Khỏe/P2/Q6"
+                            name="full-name"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <form id="userName">
+
+
+                    <div class="mb-4">
+                        <label for="email" class="block text-xl font-medium text-gray-600">Email</label>
+                        <input
+                            autocomplete="email"
+                            type="text"
+                            id="register-email"
+                            placeholder="email@example.com"
+                            name="email"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="full-name" class="block text-xl font-medium text-gray-600">Tên tài khoản</label>
+                        <input
+                            autocomplete="cc-family-name"
+                            type="text"
+                            id="full-name"
+                            placeholder="a123"
+                            name="full-name"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-xl font-medium text-gray-600">Mật khẩu</label>
+                        <input
+                            autocomplete="new-password"
+                            type="password"
+                            id="new_password"
+                            placeholder="***"
+                            name="new_password"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-xl font-medium text-gray-600">Nhập lại mật khẩu</label>
+                        <input
+                            autocomplete="new-password"
+                            type="password"
+                            id="re_password"
+                            placeholder="***"
+                            name="re_password"
+                            class="w-full px-4 py-2 text-lg rounded border border-gray-300 focus:ring focus:ring-indigo-200 focus:outline-none"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-4">
+                        <button
+                            id="register-submit"
+                            class="w-full bg-blue-500 text-white text-lg font-semibold py-2 rounded focus:outline-none transition duration-300 hover:bg-blue-600 hover:shadow-md"
+                        >
+                            Đăng ký
+                        </button>
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <!-- Đường kẻ trái, chiếm hết không gian còn lại -->
+                        <span class="flex-grow border-t border-gray-400"></span>
+                      
+                        <!-- Dòng chữ, không co giãn -->
+                        <p class="mx-2">Hoặc đăng ký bằng</p>
+                      
+                        <!-- Đường kẻ phải, chiếm hết không gian còn lại -->
+                        <span class="flex-grow border-t border-gray-400"></span>
+                      </div>
+                      
+                    <div class="flex justify-between gap-2">
+                        <a
+                            href="#"
+                            class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4 flex items-center"
+                        >
+                            <img src="/assets/img/theme-icon/facebook.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
+                            Facebook
+                        </a>
+
+                        <a
+                            href="#"
+                            class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none flex items-center justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4"
+                        >
+                            <img src="/assets/img/theme-icon/google.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
+                            Google
+                        </a>
+                    </div>
+                </form>
+
+
+                <div class="text-center text-sm text-gray-600 mt-4">
+                    <span
+                        >Khi đăng ký trên NewComputerStore bạn đã đồng ý với
+                        <a href="#" class="text-red-400 underline">Các chính sách</a> và
+                        <a href="#" class="text-red-400 underline">Chính sách bảo mật</a>
+                        của chúng tôi.</span
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/assets/js/loginForm.js"></script>
+</html>

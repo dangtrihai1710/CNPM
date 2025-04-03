@@ -1,0 +1,56 @@
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline.btn-buyNow,
+.btn-outline.btn-style-2 {
+    background: #e02027;
+    color: #fff;
+}
+.btn-outline:hover,
+.btn-outline:focus {
+    scale: 1.05;
+}
+
+.btn-outline {
+    position: relative;
+    border: 2px solid;
+    border-color: #e02027;
+    white-space: nowrap;
+    color: #e02027;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+    outline: none !important;
+}
+.btn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+}
+
+.note_cart textarea {
+    border: 1px solid #ccc; /* Add a border to the textarea */
+    padding: 5px; /* Add padding to the textarea */
+    width: 100%; /* Make the textarea take up the full width */
+    min-height: 80px;
+    box-sizing: border-box; /* Include the border in the width */
+}
+
+p {
+    margin-bottom: 20px;
+    margin: 0 0 10px;
+    text-align: left;
+}
+.pd_saler p {
+    background: url(//theme.hstatic.net/200000420363/1001162486/14/check-ser.png?v=285) left 2px no-repeat;
+}
+input.ajaxcart__qty-num {
+    font-family: inherit;
+    min-width: 2rem;
+    text-align: center;
+    border: 1px solid #7b7b7b;
+    color: #222;
+    padding: 0;
+    border-radius: 0.2rem;
+}

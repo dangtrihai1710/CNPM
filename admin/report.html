@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS Tag (Ver.01) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                            Righteous: ['Righteous', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <!-- Bootstrap Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+            crossorigin="anonymous"
+        />
+        <!-- Title -->
+        <title>NewComputerStore - Trang chủ</title>
+        <!-- Icon -->
+        <link rel="icon" type="image/svg" href="/assets/img/pc-logo-white.svg" />
+    </head>
+    <body>
+        <header id="header" class="w-full bg-[#d72c2c]">
+            <div
+                class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
+            >
+                <!-- logo & menu -->
+                <div class="flex items-center gap-2 sm:flex-row-reverse">
+                    <!-- main menu btn -->
+                    <button
+                        title="Menu"
+                        onclick="handleOpenAdminSidebar()"
+                        class="inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-list text-white text-xl"></i>
+                    </button>
+                    <!-- logo icon -->
+                    <a href="/" class="min-[400px]:inline-flex hidden px-2 items-center gap-1">
+                        <!-- logo -->
+                        <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e6e6e6;
+                                    }
+                                    .cls-2 {
+                                        fill: #ccc;
+                                    }
+                                    .cls-3 {
+                                        fill: #3f464d;
+                                    }
+                                    .cls-4 {
+                                        fill: #363f47;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="_01" data-name="01">
+                                <polygon
+                                    class="cls-1"
+                                    points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
+                                    id="id_101"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <polygon
+                                    class="cls-2"
+                                    points="19.67 25 12.33 25 13 23 19 23 19.67 25"
+                                    id="id_102"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <path
+                                    class="cls-1"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
+                                    id="id_103"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></path>
+                                <path
+                                    class="cls-3"
+                                    d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
+                                    id="id_104"
+                                ></path>
+                                <rect
+                                    class="cls-2"
+                                    x="16"
+                                    y="4"
+                                    width="13"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_105"
+                                ></rect>
+                                <path
+                                    class="cls-2"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
+                                    id="id_106"
+                                ></path>
+                                <rect
+                                    class="cls-1"
+                                    x="15"
+                                    y="4"
+                                    width="14"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_107"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></rect>
+                                <rect class="cls-3" x="18" y="9" width="9" height="1" id="id_108"></rect>
+                                <rect class="cls-3" x="18" y="12" width="9" height="1" id="id_109"></rect>
+                                <circle class="cls-3" cx="19" cy="25" r="1" id="id_110"></circle>
+                                <rect class="cls-4" x="14" y="20" width="1" height="4" id="id_111"></rect>
+                            </g>
+                        </svg>
+                        <h1 class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase">
+                            NewComputerStore.vn
+                        </h1>
+                    </a>
+                </div>
+                <!-- nav -->
+                <div class="flex gap-2 items-center justify-center">
+                    <!-- User Avt -->
+                    <button
+                        id="avatar"
+                        class="relative h-[45px] w-[45px] bg-white rounded-full flex items-center justify-center"
+                    >
+                        <img src="/assets/img/admin_avt.png" alt="User Avatar" class="rounded-full w-10 h-10" />
+                        <span
+                            class="absolute bottom-0 right-0 bg-white rounded-full w-3 h-3 inline-flex justify-center items-center"
+                            ><i class="bi bi-chevron-down leading-none text-[8px] inline-flex"></i
+                        ></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div id="main" class="h-auto w-full overflow-x-hidden">
+            <div class="h-auto mx-auto max-w-screen-2xl bg-white flex">
+                <!-- Section Left (Sidebar) -->
+                <div
+                    id="sidebar-container"
+                    class="sidebar--open hidden border-r lg:min-w-[250px] w-max min-h-full bg-white transition-transform duration-300"
+                >
+                    <div class="admin-sidebar"></div>
+                </div>
+                <!-- Main -->
+                <div class="py-2 px-4 w-full h-full">
+                    <!-- Dashboard (Chart) -->
+                    <div class="">
+                        <div class="flex items-center justify-between">
+                            <h1 class="font-normal text-xl py-4">Admin Dashboard</h1>
+                            <button class="p-1 rounded-full bg-[#333] hover:bg-[#555] active:bg-[#444]">
+                                <i class="text-white bi bi-gear-fill h-6 w-6 block"></i>
+                            </button>
+                        </div>
+                        <!-- Card  -->
+                        <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 mb-4">
+                            <div
+                                class="h-[150px] bg-red-500 text-white p-2 px-4 flex flex-col items-end justify-center basis-1/4 relative"
+                            >
+                                <h1 class="text-3xl text-end">12</h1>
+                                <p class="text-sm leading-none text-end">Người vào trang trong ngày</p>
+                                <span class="absolute bottom-0 left-0">
+                                    <i class="bi bi-people-fill text-6xl text-white opacity-25 leading-none"></i>
+                                </span>
+                            </div>
+                            <div
+                                class="h-[150px] bg-amber-400 text-white p-2 px-4 flex flex-col items-end justify-center basis-1/4 relative"
+                            >
+                                <h1 class="text-3xl text-end">12,00 Triệu đồng</h1>
+                                <p class="text-sm leading-none">Tổng doanh thu trong ngày</p>
+                                <span class="absolute bottom-0 left-0">
+                                    <i class="bi bi-cash-coin text-6xl text-white opacity-25 leading-none"></i>
+                                </span>
+                            </div>
+                            <div
+                                class="h-[150px] bg-blue-500 text-white p-2 px-4 flex flex-col items-end justify-center basis-1/4 relative"
+                            >
+                                <h1 class="text-3xl leading-none text-end">10</h1>
+                                <p class="text-sm leading-none text-end">Đơn hàng mới trong ngày</p>
+                                <span class="absolute bottom-0 left-0">
+                                    <i class="bi bi-cart-check-fill text-6xl text-white opacity-25 leading-none"></i>
+                                </span>
+                            </div>
+                            <div
+                                class="h-[150px] bg-violet-500 text-white p-2 px-4 flex flex-col items-end justify-center basis-1/4 relative"
+                            >
+                                <h1 class="text-3xl text-end">1</h1>
+                                <p class="text-sm leading-none text-end">Đơn hàng chờ xác nhận</p>
+                                <span class="absolute bottom-0 left-0">
+                                    <i class="bi bi-cart-dash-fill text-6xl text-white opacity-25 leading-none"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Charts -->
+                        <div class="mb-4 flex w-full basis-full gap-4 lg:flex-row flex-col">
+                            <div class="lg:basis-1/2 border rounded p-2 px-4">
+                                <!-- Title -->
+                                <div class="text-[#333] flex justify-between items-center border-b py-2">
+                                    <h1 class="font-medium uppercase text-xl tracking-tighter text-red-500">
+                                        <i class="bi bi-people-fill"></i>
+                                        Lượt vào trang
+                                    </h1>
+                                    <select class="bg-white border rounded py-1 px-2">
+                                        <option value="day">Trong Ngày</option>
+                                        <option value="week">Trong Tuần</option>
+                                        <option value="month">Trong Tháng</option>
+                                        <option value="month" selected>Trong Năm</option>
+                                    </select>
+                                </div>
+                                <!-- Chart container -->
+                                <canvas id="visitors__chart"></canvas>
+                            </div>
+                            <div class="lg:basis-1/2 border rounded p-2 px-4">
+                                <!-- Title -->
+                                <div class="text-[#333] flex justify-between items-center border-b py-2">
+                                    <h1 class="font-medium uppercase text-xl tracking-tighter text-amber-400">
+                                        <i class="bi bi-cash-coin"></i>
+                                        Doanh thu
+                                    </h1>
+                                    <select class="bg-white border rounded py-1 px-2">
+                                        <option value="day">Trong Ngày</option>
+                                        <option value="week">Trong Tuần</option>
+                                        <option value="month">Trong Tháng</option>
+                                        <option value="month" selected>Trong Năm</option>
+                                    </select>
+                                </div>
+                                <!-- Chart container -->
+                                <canvas id="revenues__chart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Big chart -->
+                        <div class="basis-full border rounded p-2 px-4">
+                            <!-- Title -->
+                            <div class="text-[#333] flex justify-between items-center border-b py-2">
+                                <h1 class="font-medium uppercase text-xl tracking-tighter text-blue-500">
+                                    <i class="bi bi-basket-fill"></i>
+                                    Các doanh mục bán hàng
+                                </h1>
+                                <select class="bg-white border rounded py-1 px-2">
+                                    <option value="week">Theo lượt xem</option>
+                                    <option value="month">Theo lượt mua</option>
+                                    <option value="month" selected>Theo Doanh thu</option>
+                                </select>
+                            </div>
+                            <!-- Chart container -->
+                            <canvas id="bestSellCategory__chart" class="max-h-[400px]"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/productsApi.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/admin.js"></script>
+</html>

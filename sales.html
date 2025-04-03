@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/sent-icon-32x32.png" />
+        <!-- css -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <title>NewComputerStore.VN</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div
+            class="navbar overflow-hidden fixed top-0 left-0 w-screen bg-white flex flex-wrap items-center justify-center gap-2 py-2 h-38 z-50"
+        >
+            <a href="#" class="navigation max-md:text-base text-lg">Hệ thống showroom</a>
+            <a href="#" class="navigation max-md:text-base text-lg">Trả góp</a>
+            <a href="#" class="navigation max-md:text-base text-lg">Bảo hành</a>
+            <a href="#" class="navigation max-md:text-base text-lg">Liên hệ</a>
+
+            <img
+                src="/assets/img/theme-icon/facebook.png"
+                alt=""
+                class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
+            />
+            <img
+                src="/assets/img/theme-icon/youtube.png"
+                alt=""
+                class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
+            />
+            <img
+                src="/assets/img/theme-icon/twitter.png"
+                alt=""
+                class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
+            />
+            <img
+                src="/assets/img/theme-icon/instagram.png"
+                alt=""
+                class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
+            />
+            <a
+                href="tel:YOUR_PHONE_NUMBER"
+                class="hotline-button bg-white text-red-500 border-2 py-1 px-2 font-bold rounded-full hover:bg-red-500 hover:border-2 hover:border-red-600 hover:text-white text-base inline-flex"
+            >
+                <img
+                    src="/assets/img/theme-icon/contact-mail.png"
+                    alt="Hotline Icon"
+                    class="w-8 h-8 mr-2 inline-block"
+                />
+                <p class="lg:text-2xl sm:text-xl text-lg">Hotline 0795174080</p>
+            </a>
+        </div>
+
+        <h1 class="text_center text-[#1f0909] text-center font-WorkSans"></h1>
+        <!-- Product Section -->
+        <div class="product-section bg-purple-950 py-10">
+            <div class="container mx-auto">
+                <!-- Banner Quang Cao -->
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/img/img_phanloai/List_6.png" alt="Laptop" class="lg:w-4/6 w-full" />
+                </div>
+                <div class="flex items-center justify-center space-x-4">
+                    <a href="#Laptop" class="lg:w-1/4 img-container">
+                        <img src="/assets/img/img_phanloai/Phanloai_Laptop_1.png" alt="Laptop" class="w-full" />
+                    </a>
+                    <a href="#Gearvn" class="lg:w-1/4 img-container">
+                        <img src="/assets/img/img_phanloai/Phanloai_Gearvn_2.png" alt="Laptop" class="w-full" />
+                    </a>
+                    <a href="#Manhinh" class="lg:w-1/4 img-container">
+                        <img src="/assets/img/img_phanloai/Phanloai_Manhinh_3.png" alt="Laptop" class="w-full" />
+                    </a>
+                    <a href="#Linhkien" class="lg:w-1/4 img-container">
+                        <img src="/assets/img/img_phanloai/Phanloai_Phukien_4.png" alt="Laptop" class="w-full" />
+                    </a>
+                </div>
+
+                <!-- Laptop Title -->
+                <i id="Laptop" class="py-10 w-full block"></i>
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/img/img_phanloai/Phanloai_Laptop_1.png" alt="Laptop" class="lg:w-1/4 w-1/2" />
+                </div>
+                <!-- Products Card Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 my-6">
+                    <!-- Product 1 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Acer_Predator_2.png"
+                            alt="Product 1"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Asus_Tuf_3.png"
+                            alt="Product 2"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Asus_Vivobook_1.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 4-->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Msi_Gf63_12uc_4.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Gigabyte_G5_5.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_laptop/Msi_Gf63_Thin_6.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                <!-- Gearvn Title -->
+                <i id="Gearvn" class="py-10 w-full block"></i>
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/img/img_phanloai/Phanloai_Gearvn_2.png" alt="Laptop" class="lg:w-1/4 w-1/2" />
+                </div>
+                <!-- Thùng PC Gearvn -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-5 my-6">
+                    <!-- Sản phẩm 1 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gvn_Asus_1.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 2 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_2.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Các sản phẩm tiếp theo -->
+                    <!-- Sản phẩm 3 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_3.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 4 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_4.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 5 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_5.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 6 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_6.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 7 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_7.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 8 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_8.png" class="w-full rounded-lg" />
+                    </div>
+
+                    <!-- Sản phẩm 9 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img src="/assets/img/img_pc/Gearvn_Gaming_9.png" class="w-full rounded-lg" />
+                    </div>
+                </div>
+
+                <!--  Manhinh -->
+                <i id="Manhinh" class="py-10 w-full block"></i>
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/img/img_phanloai/Phanloai_Manhinh_3.png" alt="Laptop" class="lg:w-1/4 w-1/2" />
+                </div>
+                <!-- SPManhinh -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 my-6">
+                    <!-- Product 1 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Viewsonic_VA2432-H_1.png"
+                            alt="Product 1"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Asus_Vz24ehf_2.png"
+                            alt="Product 2"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Lg_24gn65r-B_3.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 4-->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Aoc_Q24g2_4.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Lg_27gr95qe_G-sync_5.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Msi_Optixmag274qrx_6.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Asus_Proartpa248qv-p_7.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_manhinh/Dell_Ultrasharpu2422h_8.png"
+                            alt="Product 3"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+                <!-- Button_linhkien -->
+                <i id="Linhkien" class="py-10 w-full block"></i>
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/img/img_phanloai/Phanloai_Phukien_4.png" alt="Laptop" class="lg:w-1/4 w-1/2" />
+                </div>
+                <!-- sanphamlinhkien -->
+                <div
+                    class="grid max-[380px]:grid-cols-1 min-[380px]:gap-x-4 min-[380px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-5 my-6"
+                >
+                    <!-- Product 1 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Chuot_Asus_Tuf_gaming_m3_gen2_1.png"
+                            alt="Product 1"
+                            class="w-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Chuot_Rapoo_V300w_Black_2.png"
+                            alt="Product 2"
+                            class="w-full object-cover"
+                        />
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Chuot_Logitech_G_Pro_X_Superlight_2_3.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 4-->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Tainghe_Gaming_RapooVh160_4.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Tainghe_Asus_Rog_Cetra_2_Core_5.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Tainghe_Hp_Hyperx_cloud_6.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Tainghe_Corsair_Hs55_Wireless_7.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 8 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Banphim_E_Dra_Ek387l_Rgb_8.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 9 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Banphim_Dareu_Ek87v2_9.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 10 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Banphim_Dareu_Ek1280sv2_Rgb_10.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                    <!-- Product 11 -->
+                    <div class="product-card rounded-lg bg-purple-800 p-4">
+                        <img
+                            src="/assets/img/img_phukien/Banphim_Monsgeek_M1_Qmk_11.png"
+                            alt="Product 3"
+                            class="w-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chuong trinh khuyen mai -->
+        <div class="bg-purple-800" style="background-image: url('assets/img/img_phanloai/background_khuyenmai_7.png')">
+            <div class="flex flex-col items-center w-full mx-auto md:mx-0 mt-0 md:mt-0">
+                <div class="flex mb-4 items-center justify-center">
+                    <!-- Promotion Image -->
+                    <img
+                        src="/assets/img/img_phanloai/Chuongtrinhkhuyenmai_5.png"
+                        alt=""
+                        class="md:w-1/2 sm:w-3/5 w-4/5"
+                    />
+                    <!-- Icon -->
+                    <img src="/assets/img/img_phanloai/Iconkhuyenmai_6.png" alt="" class="md:h-[10rem] h-[5rem]" />
+                </div>
+
+                <!-- Product Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 2xl:px-10 xl:px-8 px-5">
+                    <!-- Product Item 1 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/Khuyenmai_Pc_1.png" alt="" class="" />
+                        </a>
+                    </div>
+                    <!-- Product Item 2 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/Khuyenmai_Laptop_2.png" alt="" class="" />
+                        </a>
+                    </div>
+                    <!-- Product Item 3 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/khuyenmai_ghegaming_3.png" alt="" class="" />
+                        </a>
+                    </div>
+                    <!-- Product Item 4 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/Khuyenmai_Thietbimang_4.png" alt="" class="" />
+                        </a>
+                    </div>
+                    <!-- Product Item 5 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/Khuyenmai_camerathongminh_5.png" alt="" class="" />
+                        </a>
+                    </div>
+                    <!-- Product Item 6 -->
+                    <div class="p-4 product-item">
+                        <a href="#" class="block">
+                            <img src="assets/img/img_sales/Khuyenmai_Arm_Manhinh_6.png" alt="" class="" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
